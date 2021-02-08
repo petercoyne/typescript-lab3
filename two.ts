@@ -8,18 +8,17 @@ let addTask = (task: string): number => {
 
 let listAllTasks = () => {
     tasks.forEach(element => {
-        console.log(element);
+        console.log("* " + element);
     });
 }
 
-let deleteTask = (task: string) => {
+let deleteTask = (task: string): number => {
     let index: number = tasks.indexOf(task);
     if (index >= 0) {
         tasks.splice(index, 1);
         console.log("Deleting task: " + task);
     }
     return tasks.length;
-
 }
 
 // Debug

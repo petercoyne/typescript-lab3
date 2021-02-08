@@ -6,7 +6,7 @@ var addTask = function (task) {
 };
 var listAllTasks = function () {
     tasks.forEach(function (element) {
-        console.log(element);
+        console.log("* " + element);
     });
 };
 var deleteTask = function (task) {
@@ -17,6 +17,7 @@ var deleteTask = function (task) {
     }
     return tasks.length;
 };
+// Debug
 addTask("Buy newspaper");
 listAllTasks();
 deleteTask("Get milk");
