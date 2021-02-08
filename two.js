@@ -1,28 +1,22 @@
-let tasks: string[] = ["Get milk", "Clean kitchen", "Light fire"];
-
-let addTask = (task: string): number => {
+var tasks = ["Get milk", "Clean kitchen", "Light fire"];
+var addTask = function (task) {
     tasks.push(task);
     console.log("Inserting task: " + task);
     return tasks.length;
-}
-
-let listAllTasks = () => {
-    tasks.forEach(element => {
+};
+var listAllTasks = function () {
+    tasks.forEach(function (element) {
         console.log(element);
     });
-}
-
-let deleteTask = (task: string) => {
-    let index: number = tasks.indexOf(task);
+};
+var deleteTask = function (task) {
+    var index = tasks.indexOf(task);
     if (index >= 0) {
         tasks.splice(index, 1);
         console.log("Deleting task: " + task);
     }
     return tasks.length;
-
-}
-
-// Debug
+};
 addTask("Buy newspaper");
 listAllTasks();
 deleteTask("Get milk");
